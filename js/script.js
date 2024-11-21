@@ -1,30 +1,28 @@
 // 1st task
-const book = {
-  title: "Abay zholy",
-  author: "Mukhtar Auezov"
-};
+const countries = ["Kazakhstan", "China", "Italy", "France"];
+countries.push("Spain");
+console.log(countries);
 
-book.year = 1961;
-console.log(book);
+const deletedCountries = [];
+const firstDeletedCountry = countries.shift();
+deletedCountries.push(firstDeletedCountry);
+console.log(countries);
+console.log(deletedCountries);
 
-book.title = "Bakytsyz Zhamal";
-console.log(book);
+const secondDeletedCountry = countries.shift();
+deletedCountries.push(secondDeletedCountry);
+console.log(countries);
+console.log(deletedCountries);
 
-delete book.author;
-console.log(book);
+console.log(countries.join(", "));
 
 // 2nd task
-const user = {};
-user.name = prompt("Введите ваше имя:").trim();
-user.age = +prompt("Введите ваш возраст:");
-user.email = prompt("Введите ваш email:").trim();
-console.log(user);
+const participants = ["Ернар", "Айгуль", "Данияр"];
+participants.splice(1, 0, "Гульмира"); // Добавление
+console.log(participants);
 
-user.isAdmin = false;
-console.log(user);
+participants.splice(3, 1); // Удаление
+console.log(participants);
 
-user.age += 1;
-console.log(user);
-
-delete user.email;
-console.log(user);
+participants.splice(2, 1, "Еркебулан"); // Замена
+console.log(participants);
