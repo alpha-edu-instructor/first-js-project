@@ -1,28 +1,26 @@
-// 1st task
-const countries = ["Kazakhstan", "China", "Italy", "France"];
-countries.push("Spain");
-console.log(countries);
+const skills = ["HTML", "CSS", "JavaScript"];
 
-const deletedCountries = [];
-const firstDeletedCountry = countries.shift();
-deletedCountries.push(firstDeletedCountry);
-console.log(countries);
-console.log(deletedCountries);
+for (let i = 0; i < skills.length; i++) {
+  for (let j = 0; j < skills[i].length; j++) {
+    console.log(skills[i][j]);
+  }
+}
 
-const secondDeletedCountry = countries.shift();
-deletedCountries.push(secondDeletedCountry);
-console.log(countries);
-console.log(deletedCountries);
+// 1 - i, 2 - j, 3 - k
 
-console.log(countries.join(", "));
+const matrix = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12]
+];
 
-// 2nd task
-const participants = ["Ернар", "Айгуль", "Данияр"];
-participants.splice(1, 0, "Гульмира"); // Добавление
-console.log(participants);
+for (let i = 0; i < matrix.length; i++) {
+  let row = "";
+  for (let j = 0; j < matrix[i].length; j++) {
+    row += matrix[i][j] + "  ";
+  }
+  console.log(row);
+}
 
-participants.splice(3, 1); // Удаление
-console.log(participants);
-
-participants.splice(2, 1, "Еркебулан"); // Замена
-console.log(participants);
+// matrix.length = 3
+// matrix[i].length = 4
