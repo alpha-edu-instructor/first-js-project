@@ -1,26 +1,39 @@
-const skills = ["HTML", "CSS", "JavaScript"];
+// While
+let balance = 100;
 
-for (let i = 0; i < skills.length; i++) {
-  for (let j = 0; j < skills[i].length; j++) {
-    console.log(skills[i][j]);
+while (balance > 0) {
+  const input = +prompt(`Остаток: ${balance}. Введите любое число:`);
+
+  if (isNaN(input)) {
+    alert("Вы ввели некорректное значение!");
+    continue;
   }
+
+  balance -= input;
+  console.log(`Остаток баланса: ${balance}`);
 }
 
-// 1 - i, 2 - j, 3 - k
+alert("Ваш баланс отрицательный. Игра окончена!");
 
-const matrix = [
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-  [9, 10, 11, 12]
-];
+// For In
+const grades = {
+  math: 5,
+  physics: 4,
+  history: 3,
+  english: 4
+};
 
-for (let i = 0; i < matrix.length; i++) {
-  let row = "";
-  for (let j = 0; j < matrix[i].length; j++) {
-    row += matrix[i][j] + "  ";
-  }
-  console.log(row);
+for (const key in grades) {
+  console.log(`${key}: ${grades[key]} `);
 }
 
-// matrix.length = 3
-// matrix[i].length = 4
+// For Of
+const contries = ["Kazakhstan", "Great Britain", "France", "Italy"];
+
+for (let i = 0; i < contries.length; i++) {
+  console.log(`${i+1}. ${contries[i]}`);
+}
+
+for (const country of contries) {
+  console.log(country);
+}
