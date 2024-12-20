@@ -1,4 +1,4 @@
-class Car {
+export class Car {
   constructor(brand, year) {
     this.brand = brand;
     this.year = year;
